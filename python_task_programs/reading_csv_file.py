@@ -5,10 +5,10 @@
 import csv
 
 # Open the text file in read mode
-file = open("/home/neosoft/Documents/PythonFiles/venv/Name_Data_Dup.csv", "r")
+file = open("/home/neosoft/Documents/PythonFiles/venv/name_data.csv", "r")
 
 # Creating a new csv file
-new_file = open("Name_Data_Copied.csv", 'x')
+new_file = open("name_data_copy.csv", 'x')
 
 data = csv.reader(file)
 writer = csv.writer(new_file)
