@@ -8,8 +8,14 @@ majority_vote(["A", "B", "B", "A", "C", "C"]) ➞ None
 """ 
 
 def finding_majority(lst):
-    #return the majority elements in a list
-    #that occurs greater than half of the length of the list times
+    """Returns the majority elements in a list
+    that occurs greater than half of the length of the list times
+    
+    Parameters:
+        lst: list
+    Returns:
+        majority_list: list item
+    """
     unique_ele = list(set(lst))
     majority_list = [item for item in unique_ele if lst.count(item) > (len(lst) // 2)]
     return majority_list
