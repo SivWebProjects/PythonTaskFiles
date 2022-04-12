@@ -1,20 +1,24 @@
-#Create a function that takes an integer n and returns the factorial 
-#of factorials ..do it using recursive function
+# Create a function that takes an integer n and returns the factorial
+# of factorials ... do it using recursive function
 
 def finding_factorial(num):
-    #takes a whole number
-    #determines the factorial of factorials of the given number
-    #by calling itself again and again until the number equals to 0
-    #and returns the result
+    """Takes a whole number
+    determines the factorial of factorials of the given number
+    by calling itself again and again until the number equals to 0
+    and returns the result a string.
+    """
     
     if num == 0: #base case 
         return 1
     else:
         return num * finding_factorial(num - 1)
 
+    
 def fact_of_fact(num):
+    """Finds the factorial of each number by calling finding_factorial() function
+    until the number is equal to zero.
+    """
     fact = 1
-
     while num !=0:
         fact =  finding_factorial(num) * fact
         num -= 1
@@ -24,6 +28,7 @@ def fact_of_fact(num):
 
 input_valid = True
 
+# Loops continue until gets a whole number as an input
 while input_valid:
     try:
         num = int(input("Enter an whole number: "))
