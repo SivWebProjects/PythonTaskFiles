@@ -3,14 +3,14 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 
 def emotion_score(sentence):
-    """receives user text as an input and returns
-    emotion and score
+    ""
+    Receives user text as an input and returns emotion and score.
     
-    Parameters:
-        str: text 
+        Parameters:
+            sentence (str): text 
         
-    Return type:
-        str: emotion and score
+        Return type:
+            message (str): emotion and score
     """
     # Creating a SentimentIntensityAnalyzer object.
     sia_obj = SentimentIntensityAnalyzer()
@@ -55,14 +55,13 @@ def text():
     argument to the emotion_score() function and this function returns emotion and score value.
 
     Parameters:
-        none: no arguments
+        None: no arguments
         
     Return type:
-        str: emotion and score
+        sentiment (str): emotion and score
     """
     # In form[text] text is the value of the name attribute of an input text element
     text = request.form['text']
-    print(text)
     sentiment = emotion_score(text)
 
     return sentiment
