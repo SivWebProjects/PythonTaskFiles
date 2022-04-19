@@ -32,7 +32,7 @@ product_details = [{"product_id": "0",
 
 @app.route('/')
 def index():
-    """Displays text in the webpage."""
+    """Displays the text in the webpage."""
     return "<h3>Welcome to Ecommerce Page</h3>"
 
 
