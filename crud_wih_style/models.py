@@ -1,7 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
  
-db =SQLAlchemy()
- 
+db = SQLAlchemy()
+
+
 class StudentModel(db.Model):
     __tablename__ = "students"
  
@@ -14,7 +15,7 @@ class StudentModel(db.Model):
     hobbies = db.Column(db.String())
     country = db.Column(db.String(80))
  
-    def __init__(self, first_name,last_name,email,password,gender,hobbies,country):
+    def __init__(self, first_name, last_name, email, password, gender, hobbies, country):
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
