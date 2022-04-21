@@ -13,13 +13,10 @@ print("Waiting for connections...")
 # To connect one by one client continuously
 while True:
     # accept() gives the client socket and address
-    c, address = server_object.accept() 
-    
+    c, address = server_object.accept()
     name = (c.recv(1024).decode())
 
     print("connected with ", address, name)
-
-    # Here we need to send bytes format not in str fromat
-    c.send(bytes("Welcome", "utf-8")) 
-
+    # Here we need to send bytes format not in str format
+    c.send(bytes("Welcome", "utf-8"))
     c.close()

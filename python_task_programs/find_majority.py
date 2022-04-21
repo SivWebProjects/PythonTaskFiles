@@ -32,6 +32,5 @@ result = finding_majority(lst)
 
 if len(result) == 0:
     print("Majority Vote in the given list is None.")
-    
 else:
     print("Majority Vote in the given list is " + str(result[0]) + ".")

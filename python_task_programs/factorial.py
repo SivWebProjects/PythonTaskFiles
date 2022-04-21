@@ -14,7 +14,6 @@ def finding_factorial(num):
     """
     if num == 0:  # Base case
         return 1
-
     else:
         return num * finding_factorial(num - 1)
 

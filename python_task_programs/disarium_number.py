@@ -18,11 +18,9 @@ def finding_disarium(num):
     
     for i in range(length):
         sum += int(list_of_digits[i]) ** (i+1)
-    
-    result = ""
+
     if sum == int(num):
         result = "Given number " + num + " is a Disarium Number."
-
     else:
         result = "Given number " + num + " is not a Disarium Number."
 

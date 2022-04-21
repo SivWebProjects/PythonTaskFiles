@@ -1,12 +1,14 @@
+# Finding given number is a palindrome or not by taking number as a string
+
 def finding_palindrome(num):
     """
     Returns given integer is a palindrome or not.
-            Parameters:
-                    num (int): An integer
-            Returns:
-                    binary_sum (bool): A Boolean
-    """
 
+        Parameters:
+            num (int): An integer
+        Returns:
+            binary_sum (bool): A Boolean
+    """
     # When number < 0, number is not a palindrome.
     # Also, if the last digit of the number is 0, in order to be a palindrome,
     # The first digit of the number also needs to be 0.
@@ -30,13 +32,3 @@ num = int(input("Enter an integer number: "))
 
 result = finding_palindrome(num)
 print(result)
-
-"""
-# Finding given number is a palindrome or not by taking number as a string
-num = input("Enter an integer number: ")
-reverse_num = num[-1::-1]
-if num == reverse_num:
-    return True
-else:
-    return False
-"""
