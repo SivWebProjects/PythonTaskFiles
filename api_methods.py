@@ -45,6 +45,7 @@ def get():
 @app.route("/product_details/<int:product_id>", methods=['GET'])
 def get_id(product_id):
     """Displays single product details in the webpage by taking id.
+
         Parameters:
             product_id (int): An integer
         Returns:
@@ -69,6 +70,7 @@ def create():
 @app.route("/product_details/<int:product_id>", methods=['PUT'])
 def detail_update(product_id):
     """Update price of the product by taking id of the product and displays that product in the webpage.
+
         Parameters:
             product_id (int): An integer
         Returns:
@@ -80,8 +82,10 @@ def detail_update(product_id):
 
 @app.route("/product_details/<int:product_id>", methods=['DELETE'])
 def delete(product_id):
-    """Delete the product in the product details dictionary by taking id of the product
-       and displays the text in the webpage.
+    """
+    Delete the product in the product details dictionary by taking id of the product
+    and displays the text in the webpage.
+
         Parameters:
             product_id (int): An integer
         Returns:
