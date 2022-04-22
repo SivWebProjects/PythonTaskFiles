@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>User Details</title>
+</head>
+<body>
+    <h2>User Details</h2>
+    <table border="2" style="border-collapse:collapse;">
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+        {% for user in user_details %}
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
