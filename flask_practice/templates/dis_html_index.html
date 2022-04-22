@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask App</title>
+</head>
+<body>
+    <p>This is my Index HTML File.</p>
+    <p>I am implemented for and if conditional statement in HTML file.</p>
+    <p>The Front End technologies are:</p>
+    {% for i in content %}
+        <p>{{ i }}</p>
+        {% if i == 'CSS'%}
+            <p>CSS is used to style and layout web pages.</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
