@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Details</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    var actions = $("table td:last-child").html();
+    // Append row on add new user button click
+     $(".add-new").click(function(){
+        $(this).attr("disabled", "disabled");
+        var index = $("table tbody tr:last-child").index();
+        var row = '<tr>' +
+                  '<td><input type="text" class="form-control" name="name" id="name"></td>' +
+                  '<td><input type="text" class="form-control" name="email" id="email"></td>' +
+                  '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
+                  '<td><input type="text" class="form-control" name="password" id="pwd"></td>' +
+                  '<td>' + actions + '</td>' +
+                  '</tr>';
+        $("table").append(row);  
+        $("table tbody tr").eq(index + 1).find(".add, .edit, .delete").toggle();
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    
+    // On add button click add row to the table
+     $(document).on("click", ".add", function(){
+        var empty = false;
+        var input = $(this).parents("tr").find('input[type="text"]');
+        input.each(function(){
+            if(!$(this).val()){
+                $(this).addClass("error");
+                empty = true;
+            } else{ type="text/javascript"
+            }
+        });
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var pwd = $("#pwd").val();
+        $.post("/ajax_add", { name: name, email: email, phone: phone, pwd: pwd}, function(data){
+            setTimeout(()=>{
+                location.reload();
+              }, 1000);
+            $("#displaymessage").html(data);
+            $("#displaymessage").show();
+        });
+        $(this).parents("tr").find(".error").first().focus();
+        if(!empty){
+            input.each(function(){
+                $(this).parent("td").html($(this).val());
+            });   
+            $(this).parents("tr").find(".add, .edit, .delete").toggle();
+            $(".add-new").removeAttr("disabled");
+        } 
+    });
+
+    // Delete row on delete icon click
+    $(document).on("click", ".delete", function(){
+        $(this).parents("tr").remove();
+        $(".add-new").removeAttr("disabled");
+        var id = $(this).attr("id");
+        var string = id;
+        $.post("/ajax_delete", { string: string }, function(data) {
+            $("#displaymessage").html(data);
+            $("#displaymessage").show();
+            setTimeout(()=>{
+                location.reload();
+              }, 1000);
+        });
+    });
+
+    // Update row on edit icon click
+    $(document).on("click", ".update", function(){
+        var id = $(this).attr("id");
+        var string = id;
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var pwd = $("#pwd").val();
+        $.post("/ajax_update", { string: string, name: name, email: email, phone: phone,
+                                 pwd: pwd}, function(data) {
+            setTimeout(()=>{
+                location.reload();
+              }, 1000);
+            $("#displaymessage").html(data);
+            $("#displaymessage").show();
+        });
+    });
+
+    // Edit row details on edit icon click
+    $(document).on("click", ".edit", function(){  
+        $(this).parents("tr").find("td:not(:last-child)").each(function(i){
+            if (i=='0'){
+                var idname = 'name';
+            }else if (i=='1'){
+                var idname = 'email';
+            }else if (i=='2'){
+                var idname = 'phone';
+            }else if (i=='3'){
+                var idname = 'pwd';
+            }else{} 
+            $(this).html('<input type="text" name="update" id="' + idname + '" class="form-control" value="' + $(this).text() + '">');
+        });  
+        $(this).parents("tr").find(".add, .edit").toggle();
+        $(".add-new").attr("disabled", "disabled");
+        $(this).parents("tr").find(".add").removeClass("add").addClass("update"); 
+    });
+});
+</script> 
+</head>
+<body>
+    <div class="container">
+        <h2 style="color:steelblue;"><b>Account Details</b></h2>
+        <div class="table-wrapper">
+            <div class="row">
+                <div class="btn btn-warning" id="displaymessage"></div>
+
+                <button class="btn btn-light add-new"><i class="fa fa-plus"></i>Add New User</button>
+        
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="column-heading">
+                            <th style="text-align: center;">Name</th>
+                            <th style="text-align: center;">Email ID</th>
+                            <th style="text-align: center;">Phone Number</th>
+                            <th style="text-align: center;">Password</th>
+                            <th style="text-align: center;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in employee %}    
+                        <tr  class="column-value">
+                            <td>{{row.name}}</td>
+                            <td>{{row.email}}</td>
+                            <td>{{row.phone_no}}</td>
+                            <td>{{row.password}}</td>
+                            <td>
+                                <a class="add" title="Add" data-toggle="tooltip" id="{{row.id}}">
+                                    <i class="fa fa-user-plus"></i></a>
+                                <a class="edit" title="Edit" data-toggle="tooltip" id="{{row.id}}">
+                                    <i class="fa fa-pencil"></i></a>
+                                <a class="delete" title="Delete" data-toggle="tooltip" id="{{row.id}}">
+                                    <i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>   
+                        {% endfor %}    
+                    </tbody>
+                </table>
+                <button class="btn btn-light button"><a href="/" class="link">Sign Out</a></button>
+            </div>
+        </div>
+    </div>     
+</body>
+</html>
