@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Login Form</h2>
+    <div>
+        <form method="POST" action="{{url_for('login_validation')}}" style="height:280px;">
+            <div>
+                <p class="errmsg">{{ msg }}</p>
+            </div>
+
+            <div style="margin-top:50px;">
+                <label style="padding-right:50px;">Email: </label>
+                <input type="text" name="email" />
+                <br/><br/>
+                <label>Password: </label>
+                <input type="password" name="password" />
+                <br/><br/>
+                <p style="padding-left:10px;"><input type="submit" value="Submit" /></p>
+            </div>
+
+            <div style="margin-top: 20px; margin-left: 60px;">
+                <a href="/register/">Create Account</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
