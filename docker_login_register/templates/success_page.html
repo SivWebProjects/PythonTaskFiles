@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>User Details</h2>
+    <div style="background-color:lavender;height:200px;padding-top:60px;padding-bottom:50px;margin-left:50px;margin-right:50px;">
+        <div>
+            <p>{{ message }}</p>
+        </div>
+
+        <div>
+            <p class="errmsg">{{ msg }}</p>
+        </div>
+
+        <table border="2">
+            <tr>
+                <td class="col_name">User Name</td>
+                <td class="col_name">Email</td>
+                <td class="col_name">Phone Number</td>
+                <td class="col_name">Password</td>
+            </tr>
+            {% for user in user_details %}
+            <tr>
+                <td>{{user[0]}}</td>
+                <td>{{user[1]}}</td>
+                <td>{{user[2]}}</td>
+                <td>{{user[3]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <!--
+        <div>
+            <br/><br/><br/>
+            <a href="/updating_details" style="text-decoration:none;">Click for Updating Details</a>
+            <br/><br/><br/>
+        </div>
+
+        <div>
+            <a href="/deleting_details" style="text-decoration:none;">Click for Deleting Details</a>
+        </div>  -->
+    </div>
+</body>
+</html>
