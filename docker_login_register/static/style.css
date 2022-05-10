@@ -1,0 +1,123 @@
+body {
+    text-align: center;
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+form{
+    background: linear-gradient(to right, hotpink, wheat);
+    height: 370px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin:20px;
+}
+
+.reg_form{
+    background: linear-gradient(to right, orchid, goldenrod, lightsalmon);
+}
+
+label{
+    color: khaki;
+    font-size: 25px;
+    text-align: left;
+    font-weight: 600;
+}
+
+h2{
+    color: steelblue;
+    font-size: 25px;
+}
+
+table{
+    border-collapse:collapse;
+    width: 80%;body {
+    text-align: center;
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+form{
+    background: linear-gradient(to right, hotpink, wheat);
+    height: 370px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin:20px;
+}
+
+.reg_form{
+    background: linear-gradient(to right, orchid, goldenrod, lightsalmon);
+}
+
+label{
+    color: khaki;
+    font-size: 25px;
+    text-align: left;
+    font-weight: 600;
+}
+
+h2{
+    color: steelblue;
+    font-size: 25px;
+}
+
+table{
+    border-collapse:collapse;
+    width: 80%;
+    text-align: center;
+    margin-left: 100px;
+    background-color:azure;
+}
+
+td{
+    text-align: center;
+    width: 300px;
+}
+
+p{
+    color: green;
+    font-size: 24px;
+}
+
+.errmsg{
+    color: red;
+    font-size: 24px;
+}
+
+.col_name{
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+thead{
+    color: steelblue;
+}
+    text-align: center;
+    margin-left: 100px;
+    background-color:azure;
+}
+
+td{
+    text-align: center;
+    width: 300px;
+}
+
+p{
+    color: green;
+    font-size: 24px;
+}
+
+.errmsg{
+    color: red;
+    font-size: 24px;
+}
+
+.col_name{
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+thead{
+    color: steelblue;
+}
