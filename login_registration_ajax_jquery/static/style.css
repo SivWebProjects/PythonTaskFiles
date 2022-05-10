@@ -1,0 +1,118 @@
+body {
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2{
+    color: olive;
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+form{
+    background-color:rgb(94, 211, 215);
+    height: 390px;
+    width: 48%;
+    margin-left: 300px;
+    padding: 10px;
+}
+
+.form-container{
+    background-color: #f3f2e1;
+    border-radius: 10px;
+    height: 300px;
+    width: 85%;
+    margin: 30px;
+    padding: 15px;
+}
+
+label{
+    color:rgb(203, 75, 188);
+    font-weight: bold;
+    font-size: 21px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.errmsg{
+    color: red;
+    font-size: 18px;
+}
+
+.table-wrapper {
+    height: 80vh;
+    margin: 40px;
+    background: rgb(197, 232, 232); 
+    padding: 40px;
+}
+
+.add-new {
+    margin-left: 870px;
+    color: orange;
+} 
+
+.add-new i {
+    margin-right: 5px;
+}
+
+#displaymessage{
+    display: none;
+    margin-left: 200px;
+    width: 60%;
+    height: 35px;
+    font-size: 20px;
+    color: white;
+}
+
+.button{
+    float: right;
+    margin-top : 20px;
+    text-decoration: none;
+}
+
+.link{
+    color: orange;
+}
+
+table.table {
+    margin-top: 50px;
+}
+
+table.table td a {
+    margin: 0 5px;
+    min-width: 24px;
+}
+
+table.table td a.add {
+    color: #27C46B; 
+}
+
+table.table td a.edit {
+    color: #6dacd4;
+}
+
+table.table td a.delete {
+    color: yellowgreen;
+}
+
+table.table td i {
+    font-size: 19px;
+}
+
+table.table td .add {
+    display: none;
+}
+
+.column-heading {
+    color: rgb(221, 61, 230);
+    font-size: 20px;
+    background-color: lavender; /*#5dd993*/
+    padding-left: 10px;
+}
+
+.column-value {
+    background-color:rgb(247, 244, 241);/*rgb(197, 63, 90);*/
+    font-size: 16px;
+    color: brown;
+}
