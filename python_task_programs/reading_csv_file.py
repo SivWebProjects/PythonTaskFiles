@@ -7,7 +7,7 @@ import csv
 # Open the text file in read mode
 file = open("/home/neosoft/Documents/PythonFiles/venv/name_data.csv", "r")
 
-# Creating a update_delete_ajax_jquery csv file
+# Creating a new csv file
 new_file = open("name_data_copy.csv", 'x')
 
 data = csv.reader(file)
@@ -24,7 +24,7 @@ print("Original Data in CSV File: " + str(data_list))
 length = len(data_list)
 print("Length of list is: " + str(length))
 
-# Writes all the rows except last two rows into the update_delete_ajax_jquery file
+# Writes all the rows except last two rows into the new file
 for i in range(length - 2):
     writer.writerow(data_list[i])
 
