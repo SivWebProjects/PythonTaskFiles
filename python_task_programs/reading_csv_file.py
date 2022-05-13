@@ -1,4 +1,4 @@
-# Read a csv file, remove last 2 rows from it and create update_delete_ajax_jquery csv file
+# Read a csv file, remove last 2 rows from it and create new csv file
 # using csv library not pandas
 
 # csv means comma-separated values
