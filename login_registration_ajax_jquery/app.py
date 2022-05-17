@@ -4,9 +4,6 @@ from flask_mysqldb import MySQL, MySQLdb
 
 app = Flask(__name__)
 
-# Creating a secret key
-app.secret_key = "caircocoders-ednalan"
-
 # Connecting to the database
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
