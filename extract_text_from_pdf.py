@@ -1,7 +1,6 @@
 # Import required packages
 from pdf2image import convert_from_path
 import cv2
-import matplotlib.pyplot as plt
 import pytesseract
 import os
 import re
@@ -64,8 +63,7 @@ for image_path in os.listdir(folder_path):
 
         # Crop the text block for giving input to OCR
         cropped = img2[y:y + h, x:x + w]
-        plt.imshow(img2)
-
+        
         # Apply OCR on the cropped image
         text = pytesseract.image_to_string(cropped)
         each_recipe_text.append(text)   
