@@ -81,7 +81,7 @@ def extract_text(folder_path):
 
 # path to the images folder
 folder_path = "/home/neosoft/Documents/recipe_data/recipes_images"
-recipes_list = extract_text(folder_path))
+recipes_list = extract_text(folder_path)
 
 # Remove trailing and leading spaces and store data in the list
 titles_list, ingredients_list, procedure_list = [], [], []
