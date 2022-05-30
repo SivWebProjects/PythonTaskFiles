@@ -1,4 +1,4 @@
- Importing the libraries
+# Importing the libraries
 import tensorflow as tf
 from keras.preprocessing.image import ImageDataGenerator
 import cv2
