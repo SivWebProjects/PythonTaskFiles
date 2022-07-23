@@ -22,7 +22,7 @@ mp_draw = mp.solutions.drawing_utils
 points = mp_pose.PoseLandmark
 
 # Import the dataset
-csv_file_path = "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/yoga_5_poses_data.csv"
+csv_file_path = "/home/Documents/CSVFiles/yoga_poses_dataset/yoga_5_poses_data.csv"
 data = pd.read_csv(csv_file_path)
 x, y = data.iloc[:, :132], data['OUTPUT']
 
@@ -80,11 +80,11 @@ def detect_pose(image, pose):
 
 
 # Read the image from the specified path to detect the pose
-images_path = ["/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/test/downdog/00000101.jpg",
-               "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/test/plank/00000028.jpg",
-               "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/test/warrior2/00000102.jpg",
-               "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/test/goddess/00000058.jpg",
-               "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/test/tree/00000045.jpg"]
+images_path = ["/home/Documents/CSVFiles/yoga_poses_dataset/test/downdog/00000101.jpg",
+               "/home/Documents/CSVFiles/yoga_poses_dataset/test/plank/00000028.jpg",
+               "/home/Documents/CSVFiles/yoga_poses_dataset/test/warrior2/00000102.jpg",
+               "/home/Documents/CSVFiles/yoga_poses_dataset/test/goddess/00000058.jpg",
+               "/home/Documents/CSVFiles/yoga_poses_dataset/test/tree/00000045.jpg"]
 # Read image using opencv
 results = []
 length = len(images_path)
