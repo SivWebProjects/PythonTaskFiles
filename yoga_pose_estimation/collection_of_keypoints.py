@@ -68,17 +68,17 @@ def extract_keypoints(folder_path, csv_file_path):
 
 
 # train dataset path
-folder_path = "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/train/tree"
+folder_path = "/home/Documents/CSVFiles/yoga_poses_dataset/train/tree"
 # csv file path
-csv_file_path = "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/yoga_data_csv_files/yoga_tree_data.csv"
+csv_file_path = "/home/Documents/CSVFiles/yoga_poses_dataset/yoga_data_csv_files/yoga_tree_data.csv"
 extract_keypoints(folder_path, csv_file_path)
 
 # Create a CSV File
-file_path = "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/yoga_5_poses_data.csv"
+file_path = "/home/Documents/CSVFiles/yoga_poses_dataset/yoga_5_poses_data.csv"
 
 # Combine the data from five asanas and save it in a csv file
-file_path = "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/yoga_5_poses_data.csv"
-folder_path = "/home/neosoft/Documents/CSVFiles/yoga_poses_dataset/yoga_data_csv_files"
+file_path = "/home/Documents/CSVFiles/yoga_poses_dataset/yoga_5_poses_data.csv"
+folder_path = "/home/Documents/CSVFiles/yoga_poses_dataset/yoga_data_csv_files"
 # chdir() change the current working directory to specified path.
 os.chdir(folder_path)
 extension = 'csv'
