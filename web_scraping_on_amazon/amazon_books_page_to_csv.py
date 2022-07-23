@@ -74,7 +74,7 @@ books['Price'] = prices
 print(books)
 
 # Step 6: Creating CSV file
-csv_file_path = "/home/neosoft/Documents/csv_files/amazon_books.csv"
+csv_file_path = "/home/Documents/csv_files/amazon_books.csv"
 # new_file = open(csv_file_path, "x")
 # Step 7: Storing data in a created csv file
 # books.to_csv(csv_file_path)
