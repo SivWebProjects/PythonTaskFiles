@@ -1,8 +1,8 @@
 from pdfminer.pdfpage import PDFPage
 
-pdf_files = ["/home/neosoft/Documents/recipe_data/crockpot_recipes.pdf",
-             "/home/neosoft/Documents/recipe_data/italian_recipes.pdf",
-             "/home/neosoft/Documents/recipe_data/barbecue_recipes.pdf"]
+pdf_files = ["/home/Documents/recipe_data/crockpot_recipes.pdf",
+             "/home/Documents/recipe_data/italian_recipes.pdf",
+             "/home/Documents/recipe_data/barbecue_recipes.pdf"]
 
 
 def pdf_type(pdf_file_path):
