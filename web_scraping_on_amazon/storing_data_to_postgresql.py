@@ -1,7 +1,7 @@
 import pandas as pd
 import psycopg2
 
-csv_file_path = '/home/neosoft/Documents/csv_files/amazon_books.csv'
+csv_file_path = '/home/Documents/csv_files/amazon_books.csv'
 books_data = pd.read_csv(csv_file_path, index_col=False)
 print(books_data.head())
 
