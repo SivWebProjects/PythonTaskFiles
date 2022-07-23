@@ -2,7 +2,7 @@ import pandas as pd
 import mysql.connector as mysql
 from mysql.connector import Error
 
-csv_file_path = '/home/neosoft/Documents/csv_files/amazon_books_2.csv'
+csv_file_path = '/home/Documents/csv_files/amazon_books_2.csv'
 books_data = pd.read_csv(csv_file_path, index_col=False)
 print(books_data.head())
 
