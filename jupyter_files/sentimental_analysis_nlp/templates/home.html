@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h3>Please give your feedback</h3>
+    <form action="{{url_for('text')}}" method="POST">
+        <label>Feedback: </label>
+        <input type="text" name="text">
+        <br/><br/>
+        <input type="submit" value="Submit" id="submit">
+        <br/><br/>
+    </form>
+    <div>
+        <p>{{ msg }}</p>
+    </div>
+</body>
+</html>
