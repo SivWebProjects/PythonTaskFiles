@@ -1,0 +1,18 @@
+body {
+  text-align: left;
+  background: teal;
+  margin-left: 50px;
+  margin-top: 40px;
+  color: yellow
+}
+
+#submit{
+  background-color: khaki;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid pink;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+}
